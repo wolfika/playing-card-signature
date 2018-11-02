@@ -1,5 +1,7 @@
 # playing-card-signature
 
+[![Build Status](https://travis-ci.org/wolfika/playing-card-signature.svg?branch=master)](https://travis-ci.org/wolfika/playing-card-signature) [![codecov](https://codecov.io/gh/wolfika/playing-card-signature/branch/master/graph/badge.svg)](https://codecov.io/gh/wolfika/playing-card-signature)
+
 > Parse playing card signatures, to programatically determine their rank and suit
 
 
