@@ -32,7 +32,22 @@ Accepts a card signature and an options object as parameter, and returns the par
 * suit
 * the signature itself
 
-Returns null if the signature could not be parsed.
+Returns `null` if the signature could not be parsed.
+
+
+### `validate(signature : string)`
+
+Validates the given card signature, and returns a boolean, indicating the result.
+
+Valid examples:
+* `8d`
+* `kh`
+* `as`
+
+Invalid examples:
+* `s4`
+* `dd`
+* `11c`
 
 
 ## License

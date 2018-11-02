@@ -94,3 +94,16 @@ test('#parse() should provide option to cast T rank to 10', (t) => {
 test('#parse() should return null if unable to parse signature', (t) => {
   t.is(fn.parse('cat'), null);
 });
+
+test('should have a validate method', (t) => {
+  t.is(typeof fn.validate, 'function');
+});
+
+test('#validate() should return whether the signature given as a parameter is valid or not', (t) => {
+  t.true(fn.validate('4c'));
+  t.false(fn.validate('11i'));
+  t.false(fn.validate('m323'));
+  t.false(fn.validate('666'));
+  t.false(fn.validate('1337'));
+  t.false(fn.validate('i18n'));
+});

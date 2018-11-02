@@ -31,6 +31,13 @@ const parse = (signature, userOptions = {}) => {
   return {rank, suit, signature: `${rank}${suit}`};
 };
 
+const validate = (signature) => {
+  const matches = signature.match(signatureRegex);
+
+  return Array.isArray(matches) && matches.length === 3;
+};
+
 module.exports = {
   parse,
+  validate,
 };
