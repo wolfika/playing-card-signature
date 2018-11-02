@@ -1,0 +1,47 @@
+{
+  "name": "playing-card-signature",
+  "version": "0.0.1",
+  "description": "Parse playing card signatures, to programatically determine their rank and suit",
+  "license": "MIT",
+  "repository": "wolfika/playing-card-signature",
+  "author": {
+    "name": "Máté Farkas",
+    "email": "info@wolfika.eu",
+    "url": "https://github.com/wolfika"
+  },
+  "main": "index.js",
+  "module": "index.js",
+  "engines": {
+    "node": ">=8"
+  },
+  "scripts": {
+    "test": "xo && nyc ava"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "ava": "^0.25.0",
+    "codecov": "^3.1.0",
+    "nyc": "^13.1.0",
+    "xo": "^0.23.0"
+  },
+  "xo": {
+    "esnext": true,
+    "prettier": true,
+    "rules": {
+      "new-cap": 0
+    },
+    "space": true
+  },
+  "prettier": {
+    "bracketSpacing": false,
+    "singleQuote": true,
+    "trailingComma": "all",
+    "arrowParens": "always"
+  },
+  "nyc": {
+    "reporter": [
+      "lcov",
+      "text"
+    ]
+  }
+}
