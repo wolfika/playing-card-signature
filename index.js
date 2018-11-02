@@ -31,6 +31,12 @@ const parse = (signature, userOptions = {}) => {
   return {rank, suit, signature: `${rank}${suit}`};
 };
 
+/**
+ * Returns whether the given signature is valid or not.
+ *
+ * @param {string} signature  A card signature
+ * @returns {boolean} Is the signature valid
+ */
 const validate = (signature) => {
   const matches = signature.match(signatureRegex);
 
