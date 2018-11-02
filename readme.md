@@ -45,6 +45,17 @@ Accepts a card signature and an options object as parameter, and returns the par
 Returns `null` if the signature could not be parsed.
 
 
+#### Options
+
+
+##### `castTto10`
+
+**Type:** `boolean`<br/>
+**Default:** `false`<br/>
+
+If `true`, the program casts any `T` rank it encounters to `10`.
+
+
 ### `validate(signature : string)`
 
 Validates the given card signature, and returns a boolean, indicating the result.
