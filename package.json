@@ -9,19 +9,31 @@
     "email": "info@wolfika.eu",
     "url": "https://github.com/wolfika"
   },
-  "main": "index.js",
-  "module": "index.js",
+  "main": "dist/playing-card-signature.min.js",
+  "module": "dist/playing-card-signature.cjs.js",
+  "unpkg": "dist/playing-card-signature.min.js",
+  "files": [
+    "dist/*",
+    "src/*"
+  ],
   "engines": {
     "node": ">=8"
   },
   "scripts": {
+    "build": "npm run build:umd && npm run build:cjs",
+    "build:umd": "rollup --config build/rollup.config.js --format umd --file dist/playing-card-signature.min.js",
+    "build:cjs": "rollup --config build/rollup.config.js --format cjs --file dist/playing-card-signature.cjs.js",
     "test": "xo && nyc ava"
   },
   "dependencies": {},
   "devDependencies": {
     "ava": "^0.25.0",
     "codecov": "^3.1.0",
+    "minimist": "^1.2.0",
     "nyc": "^13.1.0",
+    "rollup": "^0.67.0",
+    "rollup-plugin-buble": "^0.19.4",
+    "rollup-plugin-uglify-es": "^0.0.1",
     "xo": "^0.23.0"
   },
   "xo": {
@@ -39,6 +51,9 @@
     "arrowParens": "always"
   },
   "nyc": {
+    "exclude": [
+      "dist/**/*"
+    ],
     "reporter": [
       "lcov",
       "text"
