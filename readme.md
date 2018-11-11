@@ -6,7 +6,7 @@
 
 **Ranks:** `A`, `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10` (or sometimes `T`), `J`, `Q`, `K`
 
-**Suits:** ♣ clubs, ♦ diamonds, ♥ hearts, ♠ spades
+**Suits:** ♣ **c**lubs, ♦ **d**iamonds, ♥ **h**earts, ♠ **s**pades
 
 When working with playing cards in software, the cards might be referred to using their signature. The signature is a shorthand notation of a card's rank and suit. For example, a card with a signature of `4s` actually means the `four of spades`.
 
