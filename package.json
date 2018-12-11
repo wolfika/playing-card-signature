@@ -1,6 +1,6 @@
 {
   "name": "playing-card-signature",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Parse playing card signatures, to programatically determine their rank and suit",
   "license": "MIT",
   "repository": "wolfika/playing-card-signature",
