@@ -40,7 +40,8 @@
     "esnext": true,
     "prettier": true,
     "rules": {
-      "new-cap": 0
+      "new-cap": 0,
+      "unicorn/import-index": 0
     },
     "space": true
   },

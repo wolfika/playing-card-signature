@@ -3,12 +3,20 @@ const defaultOptions = {
   castTto10: false,
 };
 
+const unicodeSuits = {
+  C: '♣',
+  D: '♦',
+  H: '♥',
+  S: '♠',
+};
+
 /**
  * Accepts a card signature and an options object as parameter,
  * and returns the parsed data from it:
  *  - rank
  *  - suit
  *  - the signature itself
+ *  - nice signature (suit is displayed with respective unicode symbol)
  *
  * Returns null if the signature could not be parsed.
  *
@@ -18,17 +26,22 @@ const defaultOptions = {
  */
 const parse = (signature, userOptions = {}) => {
   const {castTto10} = {...defaultOptions, ...userOptions};
-  let [, rank, suit] = signature.match(signatureRegex) || [];
+  let [, rank, suit] = signature.toUpperCase().match(signatureRegex) || [];
 
   if (!rank || !suit) {
     return null;
   }
 
-  if (castTto10 && rank === 't') {
+  if (castTto10 && rank === 'T') {
     rank = '10';
   }
 
-  return {rank, suit, signature: `${rank}${suit}`};
+  return {
+    rank,
+    suit,
+    signature: `${rank}${suit}`,
+    niceSignature: `${unicodeSuits[suit]}${rank}`,
+  };
 };
 
 /**

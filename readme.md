@@ -29,7 +29,7 @@ const options = {
   castTto10: false,
 };
 
-console.log(parse('4s', options)); // { rank: '4', suit: 's', signature: '4s' }
+console.log(parse('4s', options)); // { rank: '4', suit: 's', signature: '4s', niceSignature: '♠4' }
 ```
 
 
@@ -41,6 +41,7 @@ Accepts a card signature and an options object as parameter, and returns the par
 * rank
 * suit
 * the signature itself
+* nice signature (suit is displayed with respective unicode symbol)
 
 Returns `null` if the signature could not be parsed.
 

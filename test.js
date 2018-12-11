@@ -1,5 +1,5 @@
 import test from 'ava';
-import fn from '.';
+import fn from './index';
 
 test('should be an object', (t) => {
   t.is(typeof fn, 'object');
@@ -16,6 +16,7 @@ test('#parse() should return an object with the correct number and type of prope
   t.truthy(sampleResult.rank);
   t.truthy(sampleResult.suit);
   t.truthy(sampleResult.signature);
+  t.truthy(sampleResult.niceSignature);
 });
 
 test('#parse() should return the correct rank, suit, and signature of the given card signature', (t) => {
@@ -24,40 +25,45 @@ test('#parse() should return the correct rank, suit, and signature of the given 
       signature: '4s',
       expectedResult: {
         rank: '4',
-        suit: 's',
-        signature: '4s',
+        suit: 'S',
+        signature: '4S',
+        niceSignature: '♠4',
       },
     },
     {
       signature: 'ad',
       expectedResult: {
-        rank: 'a',
-        suit: 'd',
-        signature: 'ad',
+        rank: 'A',
+        suit: 'D',
+        signature: 'AD',
+        niceSignature: '♦A',
       },
     },
     {
       signature: 'kc',
       expectedResult: {
-        rank: 'k',
-        suit: 'c',
-        signature: 'kc',
+        rank: 'K',
+        suit: 'C',
+        signature: 'KC',
+        niceSignature: '♣K',
       },
     },
     {
       signature: 'th',
       expectedResult: {
-        rank: 't',
-        suit: 'h',
-        signature: 'th',
+        rank: 'T',
+        suit: 'H',
+        signature: 'TH',
+        niceSignature: '♥T',
       },
     },
     {
       signature: '10h',
       expectedResult: {
         rank: '10',
-        suit: 'h',
-        signature: '10h',
+        suit: 'H',
+        signature: '10H',
+        niceSignature: '♥10',
       },
     },
     {
@@ -66,6 +72,7 @@ test('#parse() should return the correct rank, suit, and signature of the given 
         rank: '5',
         suit: 'C',
         signature: '5C',
+        niceSignature: '♣5',
       },
     },
   ];
@@ -83,8 +90,9 @@ test('#parse() should provide option to cast T rank to 10', (t) => {
     signature: 'tc',
     expectedResult: {
       rank: '10',
-      suit: 'c',
-      signature: '10c',
+      suit: 'C',
+      signature: '10C',
+      niceSignature: '♣10',
     },
   };
 
