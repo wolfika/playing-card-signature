@@ -4,7 +4,7 @@
 
 > Parse playing card signatures, to programatically determine their rank and suit
 
-**Ranks:** `A`, `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10` (or sometimes `T`), `J`, `Q`, `K`
+**Ranks:** `A`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10` (or sometimes `T`), `J`, `Q`, `K`
 
 **Suits:** ♣ **c**lubs, ♦ **d**iamonds, ♥ **h**earts, ♠ **s**pades
 
